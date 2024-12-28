@@ -1,0 +1,16 @@
+
+CREATE TABLE usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(255),
+    Email VARCHAR(255),
+    Telefone VARCHAR(255),
+    Senha VARCHAR(255)
+);
+
+CREATE TABLE tarefa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tarefa VARCHAR(255),
+    datas DATE,
+    usuario_id INT,
+    CONSTRAINT fk_usuario FOREIGN KEY (usuario_id) REFERENCES usuario(id) ON DELETE CASCADE
+);
