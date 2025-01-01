@@ -21,37 +21,58 @@
 
    <table>
 
+
     <thead>
         <tr>
-            <th>Tarefá </th>
-           
-           
+            <th>tarefa</th>
             <th>data</th>
-            
-            <th>deletar</th>
             <th>atualizar</th>
+            <th>Deletar</th>
             <th>status</th>
-       </tr>
+           
     </thead>
 
     <tbody>
+     <?php
 
-        <tr>
-            <td>arrumar casa para receber visitas no natal e ano novo </td>
-          
-          
-            <td>24/08/2024</td>
-            <td id="deletar"><i class="fa-solid fa-trash-can"></i></td>
-            <td id="atualizar"><i class="fa-solid fa-marker"></i></td>
-            <td id="marcar"><i class="fa-solid fa-check"></i></td>
-        </tr>
+       include_once('./conectar.php');
+
+       $mostrar = "SELECT * FROM `tarefa` WHERE 1";
        
+       $preparando = $conectar->prepare($mostrar);
+
+       $preparando->execute();
+
+
+       $resultado = $preparando->get_result();
+
+
+
+  
+        while($dados = mysqli_fetch_assoc($resultado)){
+               
+    
+            $trensfe = $dados['id'];
+            echo "<tr>";
+            echo "<td>". $dados['tarefa'] ."</td>";
+            echo "<td>". $dados['datas'] ."</td>";
+            echo"<td id='atualizar'><i class='fa-solid fa-marker'></i></td>";
+            echo "<td><a  id='deletar' href='deletar.php?id=" .$trensfe . "'><i class='fa-solid fa-trash-can'></i></a></td>";
+            echo"<td id='marcar'><i class='fa-solid fa-check'></i></td>";
+        
+            
+            echo "</tr>";
+
+        }
 
         
-       
-        
-        
-      
+     
+    
+     ?>
+
+     
+     
+
         
     </tbody>
    </table>
