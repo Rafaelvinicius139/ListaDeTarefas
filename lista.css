@@ -138,8 +138,8 @@ textarea{
   
     width:400px;
     height:300px;
-    background-color: #f4ac1a;
-    color: #080707;
+    background-color:#f4ac1a;
+    color:#080707;
     font-size:20px;
     text-align:center;
     padding: 10px;
@@ -193,6 +193,7 @@ table{
     border-collapse: collapse;
     text-align:left;
     margin-left:100px;
+  
  
 }
 td, th{

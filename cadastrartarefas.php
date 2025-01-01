@@ -2,7 +2,7 @@
 
 include_once('./conectar.php');
 
-  $descrição = $_POST['descriçao'] ?? "";
+  $descrição = $_POST['descricao'] ?? "";
 
   $tarefa = $_POST['tarefa'] ??"";
 
