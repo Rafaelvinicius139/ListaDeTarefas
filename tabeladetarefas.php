@@ -58,7 +58,7 @@
             echo "<td>". $dados['datas'] ."</td>";
             echo "<td><a  id='atualizar' href='editar.php?id=" .$trensfe . "'><i class='fa-solid fa-marker'></i></a></td>";
             echo "<td><a  id='deletar' href='deletar.php?id=" .$trensfe . "'><i class='fa-solid fa-trash-can'></i></a></td>";
-            echo"<td id='marcar'><i class='fa-solid fa-check'></i></td>";
+          
         
             
             echo "</tr>";

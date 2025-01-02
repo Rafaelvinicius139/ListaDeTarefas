@@ -6,8 +6,15 @@
     // Obtém o ID passado via GET e garante que é um número inteiro
     $ids = intval($_GET['id']);
 
-    // Query SQL corrigida
-    $selecionar = "SELECT descricao, tarefa, datas FROM tarefa WHERE id = ?";
+    $descrição = $_POST['descricao'] ?? "";
+
+    $tarefa = $_POST['tarefa'] ??"";
+  
+  
+    $data = $_POST['data'] ?? "";
+    
+    // Query SQL corrigida$atualizar = "UPDATE tarefa SET  descricao = ?, tarefa = ? , datas = ?  WHERE id = ?";
+    $selecionar = "SELECT descricao, id, tarefa, datas FROM tarefa WHERE id = ?";
     $selecionando = $conectar->prepare($selecionar);
 
     // Passa o valor de $ids para a query
@@ -21,12 +28,23 @@
 
     // Verifica se há resultados
     while($usuarios = $resultados->fetch_assoc()) {
-        // Atribui os valores retornados às variáveis
+         $idt = $usuarios['id'];
         $descricao = $usuarios['descricao'];
         $tarefa = $usuarios['tarefa'];
-        $data = $usuarios['datas']; // Certifique-se de que o nome da coluna no banco é 'datas'
+        $data = $usuarios['datas']; 
+
+        echo"<a href='editando.php?id=.$ids.'></a>";
+
+        
+
+       
+
     } 
+   
+    
+
 ?>
+<a href="editando.php"></a>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,14 +70,17 @@
     <div id="conteiner2">
       
 
-        <form action="cadastrartarefas.php" method="post" class="form" >
+        <form action="editando.php" method="post" class="form" >
+         <input type="hidden" name="id" value="<?php echo $idt; ?>">
+          
    
             <input type="text" name="tarefa" placeholder="Atualizar tarefa" value="<?php echo $tarefa?>"><br>
 
             <input type="date" name="data" placeholder="aualizar data"  value="<?php echo $data?>"><br>
 
             <textarea name="descricao" id="descricao" placeholder="Atualizar descrição"><?php echo htmlspecialchars($descricao); ?></textarea><br>
-
+             
+         
             <input type="submit" value="Atualizar" class="botoes">
    
    
