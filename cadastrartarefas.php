@@ -35,7 +35,7 @@ include_once('./conectar.php');
 <body>
 
    <h1> cadastro feito cpm sucesso <h1>
-  <a href="tabeladetarefas.html">tabela</a>
+  <a href="tabeladetarefas.php">tabela</a>
   
 </body>
 </html>

@@ -1,29 +1,26 @@
 <?php
 
-  include_once("./conectar.php");
+include_once("./conectar.php");
 
-  $id = intval($_POST['id']);
 
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  
+    $id = intval($_GET['id'] ?? 0);
+    $tarefas = $_POST['tarefas'] ?? '';
+    $datas = $_POST['datas'] ?? '';
+    $descricao = $_POST['descricao'] ?? '';
    
 
-   $descrição = $_POST['descricao'] ?? "";
-
-   $tarefa = $_POST['tarefa'] ??"";
  
- 
-   $data = $_POST['data'] ?? "";
-
-   $atualizar = "UPDATE tarefa SET  descricao = ?, tarefa = ? , datas = ?  WHERE ?";
-
-   $atualizando = $conectar->prepare($atualizar);
-   
-   $atualizando->bind_param('sssi',$descrição,$tarefa,$data,$ida);
-
-
    
 
+    $atualizar = "UPDATE tarefa SET descricao = ?, tarefa = ?, datas = ? WHERE id = ?";
+    $atualizando = $conectar->prepare($atualizar);
+    $atualizando->bind_param('sssi', $descricao, $tarefas, $datas, $id);
 
-
+    $atualizando->execute();
+}   
 ?>
 
 <!DOCTYPE html>
