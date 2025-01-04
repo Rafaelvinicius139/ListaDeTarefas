@@ -27,28 +27,21 @@ body{
 }
 
 #login{
-
     width:30%;
     display:flex;
     text-align:center;
     font-size:30px;
     align-items: center;
     padding: 50px;
-
 }
-
 input{
     font-size:23px;
     padding:5px ;
     margin: 20px;
     border:0;
-
     border-bottom:solid #f4ac1a 2px;
- 
     color: #080707;
-
-    outline: 0;
-    
+    outline: 0;   
 }
 #foto{
     width:60%;
@@ -56,48 +49,37 @@ input{
     background-image:url(imagens/smartphone-570507_640.jpg);
     background-position:center;
     background-size: cover;
-
- 
 }
 
 form{
-
     width:100%;
     margin:auto;
-    
-
 }
 label{
     padding:10px;
 }
-
 .botoes{
     background-color:#f4ac1a ;
     padding-inline: 30px;
     font-size: 20px;
-    border-radius:20px;
-    
+    border-radius:20px;  
 }
 
 /*  fim da parte do login */
-
 
 .corpo{
     display:flex;
     background-color: white;
 }
-
 aside{
-  
     display:flex;
     flex-direction: column;
     text-align:center;
     width:18%;
-    height:700px;
+    height:400px;
     background-color: black;
 }
 a{
-    
     font-size:25px;
     padding:5px;
     text-decoration:none;
@@ -105,18 +87,14 @@ a{
     padding: 20px;
     border-radius:10px;
     margin:10px;
-
 }
 a:hover{
     background-color: #f4ac1a;
     color: #080707;
 }
-
 #conteiner2{
     width:82%;
-    text-align:center;
-    
-    
+    text-align:center;   
 }
 
 #formdescriçao{
@@ -129,21 +107,16 @@ a:hover{
     background-color: black;
     text-align: center;
     align-content: center;
-    align-items: center;
-  
-   
-   
+    align-items: center; 
 }
 textarea{
-  
-    width:400px;
+    width:300px;
     height:300px;
     background-color:#f4ac1a;
     color:#080707;
     font-size:20px;
     text-align:center;
-    padding: 10px;
-    
+    padding: 10px; 
 }
 
 h1{
@@ -155,34 +128,26 @@ input{
     text-align:center;
     padding:10px;
 }
-
-
 #usuarios{
-  
     width:50%;
     display: flex;
     flex-direction: column;
-    text-align: left;
-   
+    text-align: left; 
 }
-
 #usuarios input{
     text-align: left;
 }
 
 .cadastrar{
-
     background-color: #f4ac1a;
     width:20%;
     align-items:center;
     border-radius:20px;
     padding:10px;
-
-    
+    font-size: 25px;   
 }
 
 table{
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -193,14 +158,11 @@ table{
     border-collapse: collapse;
     text-align:left;
     margin-left:100px;
-  
- 
 }
 td, th{
     border:solid black 1px;
     padding:20px;
-    text-align:left;
-    
+    text-align:left;   
 }
 
 th{
@@ -222,26 +184,21 @@ td{
 }
 #marcar{
     color:green;
-    text-align:center;
-  
-    
-    
+    text-align:center;   
 }
-
 #info{
     color:black;
     font-size:70px;
-
 }
-
 #menuc{
     background-color: blue;
     width:82%;
     background-image: url(imagens/pc-1207886_640.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
+
+
 
 
 

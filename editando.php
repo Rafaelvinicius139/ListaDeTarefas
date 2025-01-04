@@ -28,12 +28,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="paginas.css">
     <title>Document</title>
 </head>
 <body>
 
-  <h1>registro atualizado com sucesso </h1>
-  <a href="tabeladetarefas.php">voltar</a>
+  <h1>Registro atualizado com sucesso  </h1>
+  <a href="tabeladetarefas.php">Voltar</a>
     
 </body>
 </html>

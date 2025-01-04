@@ -11,11 +11,13 @@
 
     
    <aside>
-    <a href="cadastrotarefas.html"><i class="fa-solid fa-id-card"></i><br>cadastra tarefas </a>
-    <a href="cadastrousuarios.html"><i class="fa-regular fa-user"></i><br>Cadastro de  suarios </a>
-    <a href="tabeladetarefas.html"><i class="fa-solid fa-list"></i><br>Tabela de tarefas  </a>
-    <a href="menu.html"><i class="fa-solid fa-door-open"></i><br>Sair</a>
-    
+
+        <h1>Menu</h1>
+       <a href="cadastrotarefas.html"><i class="fa-solid fa-id-card"></i><br>Cadastro de Tarefas </a>
+        <a href="cadastrousuarios.html"><i class="fa-regular fa-user"></i><br>Cadastro de usuario </a>
+        <a href="tabeladetarefas.php"><i class="fa-solid fa-list"></i><br>Tabela de Tarefas  </a>
+        <a href="menu.html"><i class="fa-solid fa-door-open"></i><br>Sair</a>
+       
 
    </aside>
 
@@ -56,11 +58,9 @@
             echo "<tr>";
             echo "<td>". $dados['tarefa'] ."</td>";
             echo "<td>". $dados['datas'] ."</td>";
-            echo "<td><a  id='atualizar' href='editar.php?id=" .$trensfe . "'><i class='fa-solid fa-marker'></i></a></td>";
+            echo "<td><a  id='atualizar' href='editar.php?id=" .$trensfe . "'><i class='fa-solid fa-marker'> </i></a></td>";
             echo "<td><a  id='deletar' href='deletar.php?id=" .$trensfe . "'><i class='fa-solid fa-trash-can'></i></a></td>";
-          
-        
-            
+            echo "<td><a ><i class='fa-solid fa-check'></i> </a></td>";
             echo "</tr>";
 
         }

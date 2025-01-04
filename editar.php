@@ -33,7 +33,7 @@
   } 
 
 ?>
-<a href="editando.php"></a>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,10 +47,12 @@
 <body class="corpo" >
     
     <aside>
-        <a href="cadastrotarefas.html"><i class="fa-solid fa-id-card"></i><br>cadastra tarefas </a>
-        <a href="cadastrousuarios.html"><i class="fa-regular fa-user"></i><br>Cadastro de  suarios </a>
-        <a href="tabeladetarefas.html"><i class="fa-solid fa-list"></i><br>Tabela de tarefas  </a>
+        <h1>Menu</h1>
+        <a href="cadastrotarefas.html"><i class="fa-solid fa-id-card"></i><br>Cadastro de Tarefas </a>
+        <a href="cadastrousuarios.html"><i class="fa-regular fa-user"></i><br>Cadastro de usuario </a>
+        <a href="tabeladetarefas.php"><i class="fa-solid fa-list"></i><br>Tabela de Tarefas  </a>
         <a href="menu.html"><i class="fa-solid fa-door-open"></i><br>Sair</a>
+       
         
     
        </aside>
@@ -63,7 +65,7 @@
     <input type="text" name="tarefas" placeholder="Atualizar tarefa" value="<?php echo $t_atualizar ?>"><br>
     <input type="date" name="datas" placeholder="Atualizar data" value="<?php echo $d_atualizar ?>"><br>
     <textarea name="descricao" id="descricao" placeholder="Atualizar descrição"><?php echo htmlspecialchars($de_atualizar); ?></textarea><br>
-    <button type="submit" class="botoes">Atualizar</button>
+    <button type="submit" class="cadastrar">Atualizar</button>
     </form>
    
        </div>

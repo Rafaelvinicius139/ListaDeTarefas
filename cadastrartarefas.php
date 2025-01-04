@@ -30,11 +30,12 @@ include_once('./conectar.php');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="paginas.css">
   <title>Document</title>
 </head>
 <body>
 
-   <h1> cadastro feito cpm sucesso <h1>
+   <h1>Tarefa Cadastrada com Sucesso  <h1>
   <a href="tabeladetarefas.php">tabela</a>
   
 </body>
