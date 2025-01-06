@@ -12,7 +12,7 @@
     
    <aside>
 
-        <h1>Menu</h1>
+        <h3>Menu</h3>
        <a href="cadastrotarefas.html"><i class="fa-solid fa-id-card"></i><br>Cadastro de Tarefas </a>
         <a href="cadastrousuarios.html"><i class="fa-regular fa-user"></i><br>Cadastro de usuario </a>
         <a href="tabeladetarefas.php"><i class="fa-solid fa-list"></i><br>Tabela de Tarefas  </a>
