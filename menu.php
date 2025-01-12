@@ -15,7 +15,7 @@
 </head>
 <body class="corpo">
 
-   <?php  $_SESSION['uso']?>
+   <?php  $_SESSION['id']?>
 
   
    

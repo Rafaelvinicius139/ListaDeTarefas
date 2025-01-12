@@ -29,7 +29,7 @@ if (isset($_POST['email']) || isset($_POST['Senha'])) {
                 session_start();
             }
 
-            $_SESSION['uso'] = $usuario['id'];
+            $_SESSION['id'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['Nome'];
 
             header('Location:menu.php');
