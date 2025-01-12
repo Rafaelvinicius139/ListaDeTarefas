@@ -1,11 +1,10 @@
 <?php
+  if(!isset($_SESSION)){
+    session_start();
+  }
 
- session_start();
- require_once('./conectar.php');
-
-
- if(!isset($_SESSION['logado']))
- 
- header('Location:menu.html')
+  if(!isset($_SESSION['id'])){
+    die("voce nãp pode acessar esse sistema");
+  }
 
 ?>

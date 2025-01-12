@@ -1,4 +1,7 @@
+<?php
+  include('logando.php')
 
+?>
 
 
 <!DOCTYPE html>
@@ -19,7 +22,7 @@
             <a href="cadastrotarefas.html"><i class="fa-solid fa-id-card"></i><br>Cadastro de Tarefas </a>
             <a href="cadastrousuarios.html"><i class="fa-regular fa-user"></i><br>Cadastro de usuario </a>
             <a href="tabeladetarefas.php"><i class="fa-solid fa-list"></i><br>Tabela de Tarefas  </a>
-            <a href="menu.html"><i class="fa-solid fa-door-open"></i><br>Sair</a>
+            <a href="sair.php"><i class="fa-solid fa-door-open"></i><br>Sair</a>
         
     </aside>
 
