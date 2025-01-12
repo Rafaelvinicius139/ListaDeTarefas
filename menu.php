@@ -15,6 +15,8 @@
 </head>
 <body class="corpo">
 
+   <?php  $_SESSION['uso']?>
+
   
    
     <aside>

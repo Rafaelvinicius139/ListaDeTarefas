@@ -2,55 +2,42 @@
 
 include_once("./conectar.php");
 
-if(isset($_POST['email']) || isset($_POST['senha'])){
+if (isset($_POST['email']) || isset($_POST['Senha'])) {
 
-    if(strlen($_POST['email']) == 0){
-        echo "preencha seu email";
-    }else if(strlen($_POST['Senha ']) == 0){
-       echo" Preencha sua Senha ";
-    }else{
+    if (strlen($_POST['email']) == 0) {
+        echo "Preencha seu email";
+    } else if (strlen($_POST['Senha']) == 0) {
+        echo "Preencha sua senha";
+    } else {
 
         $email = $conectar->real_escape_string($_POST['email']);
-        $senha = $conectar->real_escape_string($_POST['senha']);
+        $senha = $conectar->real_escape_string($_POST['Senha']);
 
         $logando = "SELECT * FROM usuario WHERE Email = ? AND senha = ?";
-
         $parametros = $conectar->prepare($logando);
 
-        $parametros->bind_param('ss', $email,$senha );
+        $parametros->bind_param('ss', $email, $senha);
 
         $parametros->execute();
 
         $loginresultado = $parametros->get_result();
 
-        if($loginresultado == 1){
-            $usuario->fetch_assoc();
+        if ($loginresultado->num_rows > 0) {
+            $usuario = $loginresultado->fetch_assoc();
 
-            if(!isset($_SESSION)){
+            if (!isset($_SESSION)) {
                 session_start();
             }
 
-            $_SESSION['uso']= $usuario['id'];
-            $_SESSION['nome']= $usuario['Nome'];
+            $_SESSION['uso'] = $usuario['id'];
+            $_SESSION['nome'] = $usuario['Nome'];
 
-            header('Location: menu.php');
-
-            
-        
-        }else{
-            echo "falha a logar ";
+            header('Location:menu.php');
+        } else {
+            echo "Falha ao logar";
         }
-
-
-
-
-
-
-
     }
-
 }
-
 
 ?>
 
@@ -71,7 +58,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])){
             <form action="" method="post">
                 <i class="fa-solid fa-circle-user" id="info"></i>
                 <input type="email" name="email" placeholder="Email" required><br>
-                <input type="password" name="Senha " placeholder="Senha" required><br>
+                <input type="password" name="Senha" placeholder="Senha" required><br>
                 <button type="submit" class="botoes" value="logar"> Logar </button>
                 <input type="reset" value="Limpar" class="botoes">
             </form>            
